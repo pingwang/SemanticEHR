@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY health-role "http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#"
+     xml:base="http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:health-role="http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasPatient -->
+
+    <owl:ObjectProperty rdf:about="#hasPatient">
+        <rdfs:domain rdf:resource="#MedicalPractitioner"/>
+        <rdfs:range rdf:resource="#Patient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="#hasRole">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#mayTreatDisease -->
+
+    <owl:ObjectProperty rdf:about="#mayTreatDisease">
+        <rdfs:range rdf:resource="#Disease"/>
+        <rdfs:domain rdf:resource="#MedicalPractitioner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasApplicableDrug -->
+
+    <owl:DatatypeProperty rdf:about="#hasApplicableDrug">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasBirthday -->
+
+    <owl:DatatypeProperty rdf:about="#hasBirthday">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="#hasDate">
+        <rdfs:domain rdf:resource="#MedicationRecord"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasDiseaseID -->
+
+    <owl:DatatypeProperty rdf:about="#hasDiseaseID">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasDiseaseName -->
+
+    <owl:DatatypeProperty rdf:about="#hasDiseaseName">
+        <rdfs:domain rdf:resource="#Disease"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasDrugName -->
+
+    <owl:DatatypeProperty rdf:about="#hasDrugName">
+        <rdfs:domain rdf:resource="#MedicationRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasFamilyName -->
+
+    <owl:DatatypeProperty rdf:about="#hasFamilyName">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="#hasFullName">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasGender -->
+
+    <owl:DatatypeProperty rdf:about="#hasGender">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasGivenName -->
+
+    <owl:DatatypeProperty rdf:about="#hasGivenName">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasPatientID -->
+
+    <owl:DatatypeProperty rdf:about="#hasPatientID">
+        <rdfs:domain rdf:resource="#MedicationRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="#hasUnit">
+        <rdfs:domain rdf:resource="#MedicationRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="#hasValue">
+        <rdfs:domain rdf:resource="#MedicationRecord"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#hasZipCode -->
+
+    <owl:DatatypeProperty rdf:about="#hasZipCode">
+        <rdfs:domain rdf:resource="#Person"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#Dentist -->
+
+    <owl:Class rdf:about="#Dentist">
+        <rdfs:subClassOf rdf:resource="#MedicalPractitioner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#Disease -->
+
+    <owl:Class rdf:about="#Disease"/>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#ERPhysician -->
+
+    <owl:Class rdf:about="#ERPhysician">
+        <rdfs:subClassOf rdf:resource="#MedicalPractitioner"/>
+        <owl:disjointWith rdf:resource="#GP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#GP -->
+
+    <owl:Class rdf:about="#GP">
+        <rdfs:subClassOf rdf:resource="#MedicalPractitioner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#MedicalPractitioner -->
+
+    <owl:Class rdf:about="#MedicalPractitioner">
+        <rdfs:subClassOf rdf:resource="#Role"/>
+        <owl:disjointWith rdf:resource="#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#MedicationRecord -->
+
+    <owl:Class rdf:about="#MedicationRecord">
+        <rdfs:subClassOf rdf:resource="#Record"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#Patient -->
+
+    <owl:Class rdf:about="#Patient">
+        <rdfs:subClassOf rdf:resource="#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#Person -->
+
+    <owl:Class rdf:about="#Person">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#Record -->
+
+    <owl:Class rdf:about="#Record">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://tw2.tw.rpi.edu/wangp5/owl/health-role.owl#Role -->
+
+    <owl:Class rdf:about="#Role">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
