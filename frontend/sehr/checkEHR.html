@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="./js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="./js/douglascrockford-JSON-js-8e0b15c/json2.js"></script>
+    <script type="text/javascript">
+	// Load the Visualization API and the piechart package.
+      google.load('visualization', '1', {packages: ['table']});
+    </script>
+    <script type="text/javascript" src="global.js"></script>
+ 		<script type="text/javascript" src="util.js"></script>
+ 		<script type="text/javascript" src="dygraph-combined.js"></script>
+ 		<script type="text/javascript" src="dateTimeFormat.js"></script>
+ 		<script type="text/javascript" src="defaultDrugs.js"></script>
+ 		<script type="text/javascript" src="defaultLabResults.js"></script>
+ 		<script type="text/javascript" src="patients.js"></script>
+ 		<script type="text/javascript" src="drugQuantities.js"></script>
+ 		<script type="text/javascript" src="labResultQuantities.js"></script>
+ 		<script type="text/javascript" src="checkLabResults.js"></script>
+ 		<script type="text/javascript" src="checkDrugQuan.js"></script>
+  </head>
+  <body> <!-- style="font-family: Arial;border: 0 none;"-->
+<!--<a href="http://localhost/sehr/vizEHR.html" onclick="vizEHR();">Visualize EHR</a>-->
+<a HREF="javascript:vizEHR()">Visualize EHR</a>
+
+	<FORM NAME = mpidForm>		
+	<p id=mpid></p>
+	</FORM>
+	Drug List:<BR>
+	<FORM NAME="drugForm">
+  <div class='checkboxes' name="drugCheckboxes" id="drugCheckboxesID"  style="vertical-align:top; float:left;"></div> 
+ 	</FORM>
+	Lab Result:<BR>
+	<FORM NAME="labResultForm">
+  <div class='checkboxes' name="labResultCheckboxes" id="labResultCheckboxesID"  style="vertical-align:top; float:left;"></div><BR>  
+ 	</FORM><BR>
+<div id="ptTable" align="left" style="width: 800px;clear:both;"></div><BR>
+	<!--<SELECT id="ptList"></SELECT><BR>-->
+<div>Patient IDs: <select name= "pid_selection_canvas" id="pid_selection_canvas" onchange="onchange_pid_selection();"> </select>
+</div><BR>
+<FORM id="quanForm"> 
+Check Drug Dosage: <INPUT TYPE="button" NAME="checkDrugDosageButton" id="checkDrugDosageButtonId" Value="Click" onClick="checkDrugQuan();">	
+Check Lab Results: <INPUT TYPE="button" NAME="checkLabResultsButton" id="checkLabResultsButtonId" Value="Click" onClick="checkLabResults();">	
+<!--Drug Quantities: <INPUT TYPE="button" NAME="showDrugQuantity" id="showDrugQuanId" Value="Click"" onClick="buildDrugFilter()">	-->
+	</FORM>
+<table>
+<tr>
+<td style="vertical-align:top;width:600px">
+  <div id="check_drug_viz_0" style="height: 500px; width: 600px;"></div>
+  <div id="check_drug_viz_1" style="height: 500px; width: 600px;"></div>
+  <div id="check_drug_viz_2" style="height: 500px; width: 600px;"></div>
+  <div id="check_drug_viz_3" style="height: 500px; width: 600px;"></div>
+</td>
+<td style="vertical-align:top">
+<div id="abnormalLabTable" align="left" style="width: 600px;clear:both;"></div><BR>
+</td>
+</tr>
+</table>
+  </body>
+</html>
